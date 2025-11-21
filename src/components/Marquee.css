@@ -1,0 +1,106 @@
+.marquee-section {
+    padding: 6rem 0;
+    background-color: #0a0a0a;
+    overflow: hidden;
+    border-top: 1px solid #333;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 8rem;
+}
+
+.marquee-content {
+    display: inline-flex;
+    gap: 4rem;
+}
+
+.marquee-item {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    cursor: default;
+}
+
+.marquee-item:hover {
+    color: white;
+}
+
+/* Stats Section */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    margin-bottom: 8rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: var(--secondary-text);
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+}
+
+/* Github Section */
+.github-section {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.github-section h4 {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.github-subtitle {
+    color: var(--secondary-text);
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.github-grid {
+    display: grid;
+    grid-template-columns: repeat(52, 1fr);
+    gap: 4px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.github-cell {
+    width: 100%;
+    padding-bottom: 100%;
+    /* Aspect ratio 1:1 */
+    background-color: white;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        gap: 4rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+
+    .github-grid {
+        grid-template-columns: repeat(26, 1fr);
+        /* Show less columns on mobile */
+    }
+}
