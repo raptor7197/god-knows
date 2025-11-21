@@ -62,16 +62,16 @@ const Contact = () => {
         <section className="contact" id="contact" ref={containerRef}>
             <div className="container relative-z">
                 <h2 className="contact-title">Let's work together</h2>
-                <a href="mailto:hello@aimane.dev" className="contact-email">
-                    hello@aimane.dev
+                <a href="mailto:vamsikrishna.p.me@gmail.com" className="contact-email">
+                    vamsikrishna.p.me@gmail.com
                 </a>
                 <div className="social-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://twitter.com/justvamsi7" target="_blank" rel="noopener noreferrer" style={{ color: 'yellow' }}>Twitter</a>
+                    <a href="https://www.linkedin.com/in/pvamsikrishna/" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}>LinkedIn</a>
+                    <a href="github.com/raptor7197" target="_blank" rel="noopener noreferrer" style={{ color: 'green' }}>GitHub</a>
                 </div>
                 <footer className="footer">
-                    <p>&copy; {new Date().getFullYear()} Aimane. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Vamsi Krishna. All rights reserved.</p>
                 </footer>
             </div>
         </section>
