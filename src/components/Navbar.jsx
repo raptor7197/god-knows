@@ -15,7 +15,9 @@ const Navbar = () => {
     return (
         <nav className="navbar" ref={navRef}>
             <div className="logo">Vamsi Krishna</div>
-            <div className="logo"></div>
+            <div className="status-indicator">
+                <span className="dot pulsating-dot"></span> Available to work
+            </div>
 
             <ul className="nav-links">
                 <li>
@@ -25,16 +27,23 @@ const Navbar = () => {
                     }}>About</a>
                 </li>
                 <li>
+                    <a href="#skills" onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#skills').scrollIntoView({ behavior: 'smooth' });
+                    }}>Skills</a>
+                </li>
+                <li>
                     <a href="#work" onClick={(e) => {
                         e.preventDefault();
                         document.querySelector('#work').scrollIntoView({ behavior: 'smooth' });
                     }}>Work</a>
                 </li>
+                
                 <li>
                     <a href="#contact" onClick={(e) => {
                         e.preventDefault();
                         document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-                    }}>Contact</a>
+                    }}>get in touch</a>
                 </li>
             </ul>
         </nav>

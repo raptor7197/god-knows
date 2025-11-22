@@ -1,4 +1,8 @@
 import React, { useEffect, useRef } from 'react';
+import XIcon from '@mui/icons-material/X';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 import './Contact.css';
 
 const Contact = () => {
@@ -66,9 +70,9 @@ const Contact = () => {
                     vamsikrishna.p.me@gmail.com
                 </a>
                 <div className="social-links">
-                    <a href="https://twitter.com/justvamsi7" target="_blank" rel="noopener noreferrer" style={{ color: 'yellow' }}>Twitter</a>
-                    <a href="https://www.linkedin.com/in/pvamsikrishna/" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}>LinkedIn</a>
-                    <a href="https://github.com/raptor7197" target="_blank" rel="noopener noreferrer" style={{ color: 'green' }}>GitHub</a>
+                    <XIcon href="https://twitter.com/justvamsi7" target="_blank" rel="noopener noreferrer" ></XIcon>
+                    <LinkedInIcon href="https://www.linkedin.com/in/pvamsikrishna/" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}></LinkedInIcon>
+                    <GitHubIcon href="https://github.com/raptor7197" target="_blank" rel="noopener noreferrer" style={{ color: 'green' }}></GitHubIcon>
                 </div>
                 <footer className="footer">
                     <p>&copy; {new Date().getFullYear()} Vamsi Krishna. All rights reserved.</p>

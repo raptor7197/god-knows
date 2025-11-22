@@ -9,13 +9,9 @@ const skillsData = [
             { name: "JavaScript (ES6+)", color: "#F7DF1E" },
             { name: "Python", color: "#3776AB" },
             { name: "Go", color: "#00ADD8" },
-            { name: "Java", color: "#007396" },
-            { name: "C++", color: "#00599C" },
+            { name: "C++ & C", color: "#00599C" },
             { name: "TypeScript", color: "#3178C6" },
             { name: "Bash", color: "#4EAA25" },
-            { name: "Lua", color: "#000080" },
-            { name: "LaTeX", color: "#008080" },
-            { name: "Markdown", color: "#FFFFFF" },
             { name: "HTML5", color: "#E34F26" },
             { name: "CSS3", color: "#1572B6" }
         ]
@@ -28,14 +24,17 @@ const skillsData = [
             { name: "Node.js", color: "#339933" },
             { name: "Next.js", color: "#FFFFFF" },
             { name: "Vite", color: "#646CFF" },
+            { name: "Express", color: "#FFFFFF" },
+
+            { name: "Tailwind CSS", color: "#06B6D4" },
+            {name: "REST API's" , color: "#454CAD"},
             { name: "PyTorch", color: "#EE4C2C" },
+            {name: "Tensorflow" , color: "#00ADD8"},
             { name: "Scikit-learn", color: "#F7931E" },
-            { name: "PHP/Laravel", color: "#FF2D20" },
-            { name: "Bootstrap", color: "#7952B3" },
+            {name: "Langchain" , color: "#00ADD8"},
+            {name: "Streamlit" , color: "#00ADD8"},
             { name: "GSAP", color: "#88CE02" },
             { name: "Three.js", color: "#FFFFFF" },
-            { name: "Tailwind CSS", color: "#06B6D4" },
-            { name: "Express", color: "#FFFFFF" }
         ]
     },
     {
@@ -43,21 +42,29 @@ const skillsData = [
         items: [
             { name: "Git", color: "#F05032" },
             { name: "Docker", color: "#2496ED" },
-            { name: "Kubernetes", color: "#326CE5" },
             { name: "AWS", color: "#FF9900" },
             { name: "Google Cloud", color: "#4285F4" },
             { name: "Linux", color: "#FCC624" },
-            { name: "Nginx", color: "#009639" },
-            { name: "Terraform", color: "#7B42BC" },
-            { name: "Jenkins", color: "#D24939" },
-            { name: "Postman", color: "#FF6C37" },
             { name: "MongoDB", color: "#47A248" },
             { name: "MySQL", color: "#4479A1" },
             { name: "Figma", color: "#F24E1E" },
             { name: "WordPress", color: "#21759B" },
-            { name: "Drupal", color: "#0678BE" }
+            { name: "Jenkins", color: "#D24939" },
+            {name: "CI/CD", color: "#0ff12eff"},
+            {name: "Grafana", color: "#00ADD8"}
+        ]
+    },
+    {
+        category: "other random things",
+        items: [
+            { name: "Pennylane (QML Library)", color: "#F7DF1E" },
+            { name: "Qiskit", color: "#3776AB" },
+            { name: "Mitiq (Quantum error detection library)", color: "#00ADD8" },
+            { name: "", color: "#E34F26" },
+            { name: "CSS3", color: "#1572B6" }
         ]
     }
+
 ];
 
 const Skills = () => {
