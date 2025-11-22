@@ -15,10 +15,27 @@ const Navbar = () => {
     return (
         <nav className="navbar" ref={navRef}>
             <div className="logo">Vamsi Krishna</div>
+            <div className="logo"></div>
+
             <ul className="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#about" onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+                    }}>About</a>
+                </li>
+                <li>
+                    <a href="#work" onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#work').scrollIntoView({ behavior: 'smooth' });
+                    }}>Work</a>
+                </li>
+                <li>
+                    <a href="#contact" onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+                    }}>Contact</a>
+                </li>
             </ul>
         </nav>
     );

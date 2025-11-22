@@ -38,22 +38,20 @@ const About = () => {
             }
         );
 
-        // Animate text paragraphs with pop-up effect
+        // Animate text paragraphs with slide-in effect
         const paragraphs = textRef.current.querySelectorAll('p');
         paragraphs.forEach((p, index) => {
             gsap.fromTo(p,
                 {
-                    scale: 0.8,
                     opacity: 0,
-                    y: 30
+                    x: 500 // Start from right
                 },
                 {
-                    scale: 1,
                     opacity: 1,
-                    y: 0,
-                    duration: 0.8,
+                    x: 0,
+                    duration: 1,
                     delay: index * 0.2,
-                    ease: 'elastic.out(1, 0.5)',
+                    ease: 'power3.out',
                     scrollTrigger: {
                         trigger: p,
                         start: 'top 85%',
@@ -70,6 +68,7 @@ const About = () => {
 
     return (
         <section className="about" id="about" ref={sectionRef}>
+            <div className="about-bg-text">ABOUT</div>
             <div className="container">
                 <h2 className="section-title" ref={headingRef}>About Me</h2>
                 <div className="about-content" ref={textRef}>

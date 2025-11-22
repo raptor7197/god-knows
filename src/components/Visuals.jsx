@@ -6,7 +6,8 @@ const Visuals = () => {
     return (
         <section className="visuals">
             <div className="visuals-text">
-                <h2>SOME VISUALS TO GET AN IDEA</h2>
+                <h2>a small sneak-peek</h2>
+                <p>i love sunsets and beaches </p>
             </div>
 
             <div className="visuals-canvas">
@@ -14,12 +15,8 @@ const Visuals = () => {
             </div>
 
             <div className="floating-images">
-                {/* Collage of images coming from all sides */}
-                <div className="float-img img-1"></div>
-                <div className="float-img img-2"></div>
-                <div className="float-img img-3"></div>
-                <div className="float-img img-4"></div>
-                <div className="float-img img-5"></div>
+                {/* the images are to be here */}
+
             </div>
         </section>
     );
