@@ -15,12 +15,10 @@ const Contact = () => {
         if (!container) return; // Ensure container is available
 
         const handleMouseMove = (e) => {
-            // When the listener is on the container, the event only fires when the mouse is over it.
-            // e.clientX and e.clientY are still viewport coordinates.
+           
             const now = Date.now();
             const dist = Math.hypot(e.clientX - lastPos.current.x, e.clientY - lastPos.current.y);
 
-            // Only spawn if moved enough distance and enough time passed
             if (dist > 50 && now - lastTime.current > 50) {
                 spawnImage(e.clientX, e.clientY);
                 lastPos.current = { x: e.clientX, y: e.clientY };
@@ -32,7 +30,6 @@ const Contact = () => {
             const img = document.createElement('div');
             img.className = 'trail-image';
 
-            // Random placeholder colors/gradients
             const hue = Math.floor(Math.random() * 360);
             img.style.background = `hsl(${hue}, 70%, 60%)`;
 
@@ -70,9 +67,30 @@ const Contact = () => {
                     vamsikrishna.p.me@gmail.com
                 </a>
                 <div className="social-links">
-                    <XIcon href="https://twitter.com/justvamsi7" target="_blank" rel="noopener noreferrer" ></XIcon>
-                    <LinkedInIcon href="https://www.linkedin.com/in/pvamsikrishna/" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}></LinkedInIcon>
-                    <GitHubIcon href="https://github.com/raptor7197" target="_blank" rel="noopener noreferrer" style={{ color: 'green' }}></GitHubIcon>
+                    <a
+                        href="https://twitter.com/justvamsi7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="X (Twitter)"
+                    >
+                        <XIcon />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/pvamsikrishna/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <LinkedInIcon style={{ color: 'blue' }} />
+                    </a>
+                    <a
+                        href="https://github.com/raptor7197"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                    >
+                        <GitHubIcon style={{ color: 'green' }} />
+                    </a>
                 </div>
                 <footer className="footer">
                     <p>&copy; {new Date().getFullYear()} Vamsi Krishna. All rights reserved.</p>

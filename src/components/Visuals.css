@@ -42,146 +42,45 @@
 
 .floating-images {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     pointer-events: none;
     z-index: 5;
 }
 
-.float-img {
+.floating-img {
     position: absolute;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    opacity: 0.9;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-out;
+    object-fit: cover;
+    border-radius: 16px;
+    opacity: 0.8;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+    filter: saturate(1.15);
+    transform: translate(-50%, -50%) rotate(var(--float-rotation, 0deg));
+    animation-name: float-around;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-/* Collage Animation - Images coming from sides */
-.img-1 {
-    width: 200px;
-    height: 150px;
-    top: 10%;
-    left: 10%;
-    background-image: linear-gradient(45deg, #ff9a9e, #fad0c4);
-    animation: float-in-left 10s ease-in-out infinite alternate;
+.floating-img:nth-of-type(2n) {
+    animation-name: float-around-alt;
 }
 
-.img-2 {
-    width: 250px;
-    height: 180px;
-    bottom: 15%;
-    right: 10%;
-    background-image: linear-gradient(120deg, #a1c4fd, #c2e9fb);
-    animation: float-in-right 12s ease-in-out infinite alternate;
-}
-
-.img-3 {
-    width: 180px;
-    height: 240px;
-    top: 20%;
-    right: 20%;
-    background-image: linear-gradient(120deg, #84fab0, #8fd3f4);
-    animation: float-in-top 11s ease-in-out infinite alternate;
-}
-
-.img-4 {
-    width: 220px;
-    height: 160px;
-    bottom: 20%;
-    left: 20%;
-    background-image: linear-gradient(120deg, #fccb90, #d57eeb);
-    animation: float-in-bottom 13s ease-in-out infinite alternate;
-}
-
-.img-5 {
-    width: 150px;
-    height: 150px;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-    background-image: linear-gradient(120deg, #e0c3fc, #8ec5fc);
-    animation: float-pulse 8s ease-in-out infinite;
-}
-.img-6 {
-    width: 150px;
-    height: 150px;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-    background-image: linear-gradient(120deg, #e0c3fc, #8ec5fc);
-    animation: float-pulse 8s ease-in-out infinite;
-}
-.img-7 {
-    width: 150px;
-    height: 150px;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-    background-image: linear-gradient(120deg, #e0c3fc, #8ec5fc);
-    animation: float-pulse 8s ease-in-out infinite;
-}
-.img-8 {
-    width: 150px;
-    height: 150px;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-    background-image: linear-gradient(120deg, #e0c3fc, #8ec5fc);
-    animation: float-pulse 8s ease-in-out infinite;
-}   
-
-@keyframes float-in-left {
+@keyframes float-around {
     0% {
-        transform: translate(-20px, 0) rotate(-5deg);
+        transform: translate(-50%, -50%) rotate(var(--float-rotation, 0deg)) scale(0.95);
     }
 
     100% {
-        transform: translate(20px, 20px) rotate(5deg);
+        transform: translate(-45%, -55%) rotate(calc(var(--float-rotation, 0deg) + 4deg)) scale(1.05);
     }
 }
 
-@keyframes float-in-right {
+@keyframes float-around-alt {
     0% {
-        transform: translate(20px, 0) rotate(5deg);
+        transform: translate(-50%, -50%) rotate(var(--float-rotation, 0deg)) scale(1);
     }
 
     100% {
-        transform: translate(-20px, -20px) rotate(-5deg);
-    }
-}
-
-@keyframes float-in-top {
-    0% {
-        transform: translate(0, -20px) rotate(3deg);
-    }
-
-    100% {
-        transform: translate(10px, 20px) rotate(-3deg);
-    }
-}
-
-@keyframes float-in-bottom {
-    0% {
-        transform: translate(0, 20px) rotate(-3deg);
-    }
-
-    100% {
-        transform: translate(-10px, -20px) rotate(3deg);
-    }
-}
-
-@keyframes float-pulse {
-    0% {
-        transform: translateY(-50%) scale(1);
-    }
-
-    50% {
-        transform: translateY(-50%) scale(1.1);
-    }
-
-    100% {
-        transform: translateY(-50%) scale(1);
+        transform: translate(-55%, -50%) rotate(calc(var(--float-rotation, 0deg) - 4deg)) scale(1.1);
     }
 }

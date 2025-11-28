@@ -11,10 +11,8 @@ import './App.css';
 
 function App() {
   useEffect(() => {
-    // Scroll to top on mount
     window.scrollTo(0, 0);
 
-    // Prevent hash navigation on reload
     if (window.location.hash) {
       window.history.replaceState(null, null, window.location.pathname);
     }
@@ -25,9 +23,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Projects />
       <Visuals />
       <Skills />
-      <Projects />
       <Marquee />
       <Contact />
     </div>
